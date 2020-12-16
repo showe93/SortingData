@@ -16,17 +16,17 @@ public class Main {
 	public static void main(String[] args) {
 		int[] data = {71, 39, 38, 68};
 		int n = data.length;
-		int storeSpot;
-		int swapSpot;
+		int storeSpot;// index at which to store the sorted element
+		int swapSpot;//index of the element to swap into the storeSpot
 		// Declare other variables as needed.
 		for (int i = 0; i < n-1; i++) {
 			// At each pass through outer loop, storeSpot moves right to left. (Position 0 is automatic.)
 			 // Confirm storeSpot for debugging purposes.
 			// Initialize any other variables as needed.
 
-			storeSpot = i; //Declaring the int idx
+			storeSpot = i; //giving storeSpot a value
 			for (swapSpot = i + 1; swapSpot < n; swapSpot++) {
-				if (data[swapSpot] < data[storeSpot]){ //Check if the value at a certain place in the array is less then the value currently stored inside data[idx]
+				if (data[swapSpot] < data[storeSpot]){ //Check if the value at a certain place in the array is less then the value currently stored inside data[swapSpot]
 						storeSpot = swapSpot;
 				}
 
