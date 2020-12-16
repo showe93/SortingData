@@ -5,28 +5,38 @@ package com.company;
  * December, 2020
  */
 
-/* Modified by YOU
- * BSU
- * Date
+import java.util.Arrays;
+
+/* Modified by Sean K. Howe
+ * Bridgewater State University
+ * December, 2020
  */
 public class Main {
 
 	public static void main(String[] args) {
 		int[] data = {71, 39, 38, 68};
 		int n = data.length;
-		int storeSpot; // index at which to store the sorted element
-		int swapSpot; // index of the element to swap into the storeSpot
 		// Declare other variables as needed.
-		for (int i = 1; i < n; i++) {
-			storeSpot = n - i; // At each pass through outer loop, storeSpot moves right to left. (Position 0 is automatic.)
-			System.out.println(storeSpot); // Confirm storeSpot for debugging purposes.
+		for (int i = 0; i < n-1; i++) {
+			// At each pass through outer loop, storeSpot moves right to left. (Position 0 is automatic.)
+			 // Confirm storeSpot for debugging purposes.
 			// Initialize any other variables as needed.
 
-			// Do an inner loop:
-				// {Find both the *max* value between index 0 and storeSpot, inclusive, and the corresponding index *swapSpot*.}
+			int idx = i; //Declaring the int idx
+			for (int k = i + 1; k < n; k++) {
+				if (data[k] < data[idx]){ //Check if the value at a certain place in the array is less then the value currently stored inside data[idx]
+						idx= k;
+				}
 
-			//  Swap max with data[storeSpot].
+			}
+
+
+			int temp = data[idx]; //declare temp so that the new can be sorted appropriately into the list
+			data[idx]=data[i];
+			data[i]=temp;
+
 		}
+		System.out.println(Arrays.toString(data));
 		// Print the sorted array data.
 	}
 }
