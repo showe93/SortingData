@@ -1,16 +1,7 @@
 package com.company;
 
-/* Laura K. Gross
- * Bridgewater State University
- * December, 2020
- */
-
 import java.util.Arrays;
 
-/* Modified by Sean K. Howe
- * Bridgewater State University
- * December, 2020
- */
 public class Main {
 
 	public static void main(String[] args) {
